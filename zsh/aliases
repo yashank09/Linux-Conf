@@ -1,0 +1,26 @@
+# User configuration
+alias zshconf="nvim $ZDOTDIR/.zshrc"
+
+alias g='git'
+alias ga='git add'
+alias gba='git branch -a'
+alias gbd='git branch -d'
+alias gc='git commit -v'
+alias gcb='git checkout -b'
+alias gcf='git config --list'
+alias gcl='git clone'
+alias gcm='git checkout ${git_main_branch}'
+alias gcd='git checkout develop'
+alias gco='git checkout'
+alias gst='git status'
+alias ggpull='git pull origin "$(git_current_branch)"'
+alias ggpush='git push origin "$(git_current_branch)"'
+alias gl='git pull'
+alias gp='git push'
+
+# nnn settings
+alias l='ls -la'
+alias n='nnn -e'
+alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
