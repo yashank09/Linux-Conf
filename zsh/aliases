@@ -1,5 +1,4 @@
-# User configuration
-alias zshconf="nvim $ZDOTDIR/.zshrc"
+alias zshconf="$EDITOR $ZDOTDIR/.zshrc"
 
 alias g='git'
 alias ga='git add'
@@ -18,9 +17,7 @@ alias ggpush='git push origin "$(git_current_branch)"'
 alias gl='git pull'
 alias gp='git push'
 
-# nnn settings
 alias l='ls -la'
-alias n='nnn -e'
-alias v='nvim'
-alias vi='nvim'
-alias vim='nvim'
+alias n='nnn -eH'
+alias s='subl .'
+alias sb='subl'
