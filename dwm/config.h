@@ -1,27 +1,24 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const int gappx     = 58;                /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrains Mono Nerd Font:size=13" };
+static const char *fonts[]          = { "CaskaydiaCove Nerd Font:size=17" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#282828";
-static const char col_gray2[]       = "#333333";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#fefefe";
 static const char col_cyan[]        = "#005577";
-static const char col_purple[]      = "#5a5aa4";
-static const char col_red[]         = "#d54646";
-static const char col_green[]       = "#23d18b";
-static const char col_yellow[]      = "#d7ba7d";
-static const char col_blue[]        = "#81a1c1";
+static const char col_purple[]      = "#F26419";
+static const char col_red[]         = "#f20092";
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray4, col_gray1, col_gray2    },
-	[SchemeSel]  = { col_gray4, col_blue,  col_blue  },
+	[SchemeNorm] = { col_gray1, col_gray1, col_gray1 },
+	[SchemeSel]  = { col_gray1, col_gray1,col_purple },
 };
 
 /* tagging */
@@ -33,12 +30,12 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class           instance    title        tags mask     isfloating   monitor */
-	{"kitty",    NULL,       NULL,                      0,            1,           -1 },
+	//{"kitty",    NULL,       NULL,                      0,            1,           -1 },
 	{"Pavucontrol",    NULL,       NULL,                      0,            1,           -1 },
 	{"Blueman-manager", NULL,      NULL,                      0,            1,           -1 },
 	{ NULL,            NULL,       "Picture in picture",      0,            1,           -1 },
-	{"discord",       NULL,       NULL,                 2,            0,           -1 },
-	{"Slack",         NULL,       NULL,                 2,            0,           -1 },
+	{"Slack",         NULL,       NULL,                 1<<2,            0,           -1 },
+	{"zoom",         NULL,       NULL,                 1<<3,            0,           -1 },
 };
 
 /* layout(s) */
@@ -69,8 +66,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
-static const char *roficmd[] = { "rofi", "-modi", "drun", "-show", "drun", "-font", "JetBrains Mono Nerd Font 16", "-width", "20", "-columns", "2", "-show-icons", NULL };
-static const char *emojicmd[] = {"rofi", "-modi", "emoji", "-show", "emoji" ,"-width", "10", "-font", "JetBrains Mono Nerd Font 15", "-show-icons", NULL};
+static const char *roficmd[] = { "rofi", "-modi", "drun", "-show", "drun", "-font", "CaskaydiaCove Nerd Font 21", "-width", "20", "-columns", "2", "-show-icons", NULL };
+static const char *emojicmd[] = {"rofi", "-modi", "emoji", "-show", "emoji" ,"-width", "10", "-font", "CaskaydiaCove Nerd Font 19", "-show-icons", NULL};
 static const char *lockcmd[] = { "/home/heatwave/.config/rofi/lock.sh"};
 static const char *powercmd[] = { "/home/heatwave/.config/rofi/powermenu.sh"};
 static const char *pavcmd[] = {"pavucontrol", NULL};
