@@ -1,0 +1,9 @@
+[user]
+	name = yashank09
+	email = yashank@hey.com
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[credential]
+	helper = store
